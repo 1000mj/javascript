@@ -23,11 +23,53 @@
                  <div class="my-3">
                    <input type="password" class="form-control" id="password">
                  </div>
+                 <div id="pw">
+                    
+                 </div>
                  <button type="submit" class="btn btn-primary" id="send">전송</button>
                  <button type="button" class="btn btn-danger" id="send close">닫기</button>
               </form> 
         </div>
-    </div> 
+    </div>
+
+    <script>
+        function 삼육구게임(숫자){
+            if(숫자%3==0){
+                console.log('박수');
+            }else{
+                console.log('통과');
+            }
+        }
+        
+    </script>
+    <script>
+        function 삼육구게임(num){
+            if (num % 9 == 0) {
+                console.log("박수x2");
+            } else if (num % 3 == 0){
+                console.log('박수');
+            } else {
+                console.log('통과');
+            }
+        }
+        
+    </script>
+    <script>
+        function 합격했냐(과목1,과목2){
+            if(과목1<40 || 과목2<40){
+                console.log('불합격')
+            }else if(과목1+과목2>=120){
+                console.log('합격')
+            }else if(과목1+과목2<120){
+                console.log('불합격')
+            }
+        }
+        합격했냐(70,70)
+        합격했냐(30,100)
+        합격했냐(50,50)
+        
+    </script>
+
     <script>
         
 
@@ -40,10 +82,14 @@
                 alert('비밀번호를 입력하세요.');
                 e.preventDefault();
             }
-            if(document.getElementById('password').value.length<=5){
-                alert('비밀번호를 6자이상 입력해주세요.')
-            }
         });
+    </script>
+    <script>
+        document.getElementById('password').addEventListener('input',function(){
+            if(document.getElementById('password').value.length<=5){
+                console.log('6자이상')
+            }
+        })
     </script>
 
 
