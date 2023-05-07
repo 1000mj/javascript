@@ -20,6 +20,7 @@
             <span class="navbar-toggler-icon"></span>
           </button>
         </div>
+        <span class="badge bg-dark">Dark 🔄</span>
     </nav>
     <ul class="list-group">
         <li class="list-group-item">An item</li>
@@ -70,11 +71,11 @@
         })
     </script>
     <script>
-        document.getElementById('password').addEventListener('input',function(){
-            if(document.getElementById('password').value.length<=5){
-                console.log('6자이상')
-            }
-        })
+        $(document).ready( function() {
+            $( '.navbar-toggler' ).click( function() {
+                $( '.list-group' ).toggle( 'slow' );
+            });
+        });
     </script>
 
 
