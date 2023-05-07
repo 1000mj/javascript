@@ -20,7 +20,7 @@
             <span class="navbar-toggler-icon"></span>
           </button>
         </div>
-        <span class="badge bg-dark">Dark 🔄</span>
+        <span class="badge bg-dark" id="mode">Dark 🔄</span>
     </nav>
     <ul class="list-group">
         <li class="list-group-item">An item</li>
@@ -47,6 +47,22 @@
         </div>
     </div>
     <button type="button" class="btn btn-primary">버튼</button>
+
+
+
+
+    <script>
+        var count = 0;
+        document.getElementById('mode').addEventListener('click',function(){
+            count+=1;
+            if(count%3==1){
+                document.getElementById('mode').innerHTML='Light 🔄';
+            }else{
+                document.getElementById('mode').innerHTML='Dark 🔄';
+            }
+        })
+    </script>
+
 
     <script>
         document.getElementsByClassName('navbar-toggler')[0].addEventListener('click', function(){
