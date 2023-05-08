@@ -47,9 +47,16 @@
         </div>
     </div>
     <button type="button" class="btn btn-primary">버튼</button>
+    <div class="alert alert-danger">
+        5초이내 클릭
+    </div>
 
 
-
+    <script>
+        setTimeout(function(){
+            $('.alert').hide();
+        },5000)
+    </script>
 
     <script>
         var count = 0;
