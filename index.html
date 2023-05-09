@@ -48,19 +48,22 @@
     </div>
     <button type="button" class="btn btn-primary">버튼</button>
     <div class="alert alert-danger">
-        5초이내 클릭
+        <span id="timer">5</span>초이내 클릭
     </div>
 
 
     <script>
-        setTimeout(function(){
-            $('.alert').hide();
-        },1000);
+        let num = 5;
 
         setInterval(function(){
-            console.log('안녕');
-        },1000)
-        
+            num -= 1;
+            if (num >= 0){
+                document.getElementById('timer').innerHTML = num;
+            }if(num==0){
+                $('.alert').hide();
+            }
+        }, 1000);
+
     </script>
 
     <script>
@@ -77,8 +80,8 @@
 
 
     <script>
-        document.getElementsByClassName('navbar-toggler')[0].addEventListener('click', function(){
-            document.getElementsByClassName('list-group')[0].classList.add('show');
+        document.getElementsByClassName('navbar-toggler').addEventListener('click', function(){
+            document.getElementsByClassName('list-group').classList.add('show');
         });
     </script>
     <script>
