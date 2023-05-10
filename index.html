@@ -15,10 +15,10 @@
 <body>
     <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
-          <span class="navbar-brand">Navbar</span>
-          <button class="navbar-toggler" type="button">
+            <span class="navbar-brand">Navbar</span>
+            <button class="navbar-toggler" type="button">
             <span class="navbar-toggler-icon"></span>
-          </button>
+            </button>
         </div>
         <span class="badge bg-dark" id="mode">Dark 🔄</span>
     </nav>
@@ -33,17 +33,17 @@
         <div class="white-bg">
             <form action="success.html">
                 <div class="my-3">
-                  <input type="text" class="form-control" id="email">
-                 </div>
-                 <div class="my-3">
-                   <input type="password" class="form-control" id="password">
-                 </div>
-                 <div id="pw">
+                    <input type="text" class="form-control" id="email">
+                </div>
+                <div class="my-3">
+                    <input type="password" class="form-control" id="password">
+                </div>
+                <div id="pw">
                     
-                 </div>
-                 <button type="submit" class="btn btn-primary" id="send">전송</button>
-                 <button type="button" class="btn btn-danger" id="close">닫기</button>
-              </form> 
+                </div>
+                <button type="submit" class="btn btn-primary" id="send">전송</button>
+                <button type="button" class="btn btn-danger" id="close">닫기</button>
+            </form> 
         </div>
     </div>
     <button type="button" class="btn btn-primary">버튼</button>
@@ -51,6 +51,11 @@
         <span id="timer">5</span>초이내 클릭
     </div>
 
+
+
+    <script>
+        document.getElementById('password').includes('@')
+    </script>
 
     <script>
         let num = 5;
@@ -85,11 +90,14 @@
         });
     </script>
     <script>
-        $('#send').on('click',function(e){
-            if(document.getElementById('email').value==''){
-                
-               alert('아이디를 입력하세요.');
-               e.preventDefault(); //form 전송막기
+        $('form').on('submit',function(e){
+            var 입력한값=document.getElementById('email').value;
+            if(입력한값==''){
+                alert('아이디를 입력하세요.');
+                e.preventDefault(); //form 전송막기
+            if(/\S+@\S+\.\S+/.test(입력한값)){
+                alert('이메일형식 맞지않음');
+            }
             }else if(document.getElementById('password').value==''){
                 alert('비밀번호를 입력하세요.');
                 e.preventDefault();
