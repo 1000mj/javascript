@@ -68,9 +68,17 @@
     </div>
 
     <script>
-        document.querySelector(".slide-2").addEventListener('click',function(){
-            document.querySelector(".slide-container").style.transform='translateX(-100vw)';
+        var container=document.querySelector(".slide-container");
+        document.querySelector(".slide-1").addEventListener('click',function(){
+            container.style.transform='translateX(-0vw)';
         });
+        document.querySelector(".slide-2").addEventListener('click',function(){
+            container.style.transform='translateX(-100vw)';
+        });
+        document.querySelector(".slide-3").addEventListener('click',function(){
+            container.style.transform='translateX(-200vw)';
+        });
+
     </script>
 
     <script>
