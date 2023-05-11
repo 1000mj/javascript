@@ -21,3 +21,15 @@
 .show{
     display:block;
 }
+.slide-container{
+    width: 300vw;
+    transition: all 1s;
+    scroll-behavior: smooth;
+}
+.slide-box{
+    width: 100vw;
+    float: left;
+}
+.slide-box img{
+    width: 100%;
+}

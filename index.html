@@ -47,11 +47,31 @@
         </div>
     </div>
     <button type="button" class="btn btn-primary">버튼</button>
+    <div style="overflow: hidden;">
+        <div class="slide-container">
+            <div class="slide-box">
+                <img src="car1.png" />
+            </div>
+            <div class="slide-box">
+                <img src="car2.png"/>
+            </div>
+            <div class="slide-box">
+                <img src="car3.png"/>
+            </div>
+        </div>
+    </div>
+    <button class="slide-1">1</button>
+    <button class="slide-2">2</button>
+    <button class="slide-3">3</button>
     <div class="alert alert-danger">
         <span id="timer">5</span>초이내 클릭
     </div>
 
-
+    <script>
+        document.querySelector(".slide-2").addEventListener('click',function(){
+            document.querySelector(".slide-container").style.transform='translateX(-100vw)';
+        });
+    </script>
 
     <script>
         document.getElementById('password').includes('@')
