@@ -61,6 +61,7 @@
         </div>
     </div>
     <button class="next">다음</button>
+    <button class="before">이전</button>
     <button class="slide-1">1</button>
     <button class="slide-2">2</button>
     <button class="slide-3">3</button>
@@ -68,25 +69,26 @@
         <span id="timer">5</span>초이내 클릭
     </div>
 
-    <script>
-        $('.next').on('click', function(){
-        if (지금보이는 사진이 1이면) {
-            2번사진 보이게 구현
-        }
-        })
-    </script>
-
 
     <script>
         var container=document.querySelector(".slide-container");
+        var slideNow = 1;
+        document.querySelector('.next').addEventListener('click',function(){
+                container.style.transform='translateX(-'+slideNow+'00vw)';
+                slideNow ++;
+        });
+        
         document.querySelector(".slide-1").addEventListener('click',function(){
             container.style.transform='translateX(-0vw)';
+            slideNow=1;
         });
         document.querySelector(".slide-2").addEventListener('click',function(){
             container.style.transform='translateX(-100vw)';
+            slideNow=2;
         });
         document.querySelector(".slide-3").addEventListener('click',function(){
             container.style.transform='translateX(-200vw)';
+            slideNow=3;
         });
 
     </script>
