@@ -74,8 +74,11 @@
         var container=document.querySelector(".slide-container");
         var slideNow = 1;
         document.querySelector('.next').addEventListener('click',function(){
-                container.style.transform='translateX(-'+slideNow+'00vw)';
-                slideNow ++;
+            if(slideNow >=document.querySelectorAll('.slide-box img').length){
+                return;
+            }
+            container.style.transform='translateX(-'+slideNow+'00vw)';
+            slideNow ++;
         });
         document.querySelector('.before').addEventListener('click',function(){
                 slideNow --;
