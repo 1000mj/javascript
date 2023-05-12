@@ -77,6 +77,10 @@
                 container.style.transform='translateX(-'+slideNow+'00vw)';
                 slideNow ++;
         });
+        document.querySelector('.before').addEventListener('click',function(){
+                slideNow --;
+                container.style.transform='translateX(-'+slideNow+'00vw)';
+        });
         
         document.querySelector(".slide-1").addEventListener('click',function(){
             container.style.transform='translateX(-0vw)';
