@@ -73,7 +73,15 @@
     </div> 
 
 
+
     <script>
+        document.querySelector('.lorem').addEventListener('scroll',function(){
+            window.scrollBy(0,50);
+            }
+        );
+
+
+
         document.querySelector('.lorem').addEventListener('scroll',function(){
             if(document.querySelector('.lorem').scrollTop>=188){
                 alert('다읽었어요~');
