@@ -8,11 +8,13 @@ body{
 
 .navbar{
     position: fixed;
+    height: 100px;
     width: 100%;
     z-index: 2;
 }
 .navbar-brand{
     font-size: 30px;
+    transition: all 1s;
 }
 .black-bg {
     width : 100%;

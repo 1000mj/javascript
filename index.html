@@ -72,7 +72,11 @@
 
     <script>
         window.addEventListener('scroll',function(){
-            console.log(1)
+            if(window.scrollY>=100){
+                document.querySelector('.navbar-brand').style.fontSize='20px';
+            }else{
+                document.querySelector('.navbar-brand').style.fontSize='30px'
+            }
         });
     </script>
 
