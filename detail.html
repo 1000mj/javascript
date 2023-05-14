@@ -13,64 +13,66 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <nav class="navbar navbar-light bg-light" id="top">
-        <div class="container-fluid">
-            <span class="navbar-brand">Navbar</span>
-            <button class="navbar-toggler" type="button">
-            <span class="navbar-toggler-icon"></span>
-            </button>
+    <style>
+        ul.list {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            border-bottom: 1px solid #ccc;
+        }
+        ul.list::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        .tab-button {
+            display: block;
+            padding: 10px 20px 10px 20px;
+            float: left;
+            margin-right: -1px;
+            margin-bottom: -1px;
+            color: grey;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .orange {
+            border-top: 2px solid orange;
+            border-right: 1px solid #ccc;
+            border-bottom: 1px solid white;
+            border-left: 1px solid #ccc;
+            color: black;
+            margin-top: -2px;
+        }
+        .tab-content {
+            display: none;
+            padding: 10px;
+        }
+        .show {
+            display: block;
+        }
+    </style>
+      
+    <div class="container mt-5">
+        <ul class="list">
+            <li class="tab-button">Products</li>
+            <li class="tab-button orange">Information</li>
+            <li class="tab-button">Shipping</li>
+        </ul>
+        <div class="tab-content">
+            <p>상품설명입니다. Product</p>
         </div>
-        <span class="badge bg-dark" id="mode">Dark 🔄</span>
-    </nav>
-    <ul class="list-group">
-        <li class="list-group-item">An item</li>
-        <li class="list-group-item">A second item</li>
-        <li class="list-group-item">A third item</li>
-        <li class="list-group-item">A fourth item</li>
-        <li class="list-group-item">And a fifth one</li>
-    </ul>  
-    <div class="black-bg" id="black-bg">
-        <div class="white-bg">
-            <form action="success.html">
-                <div class="my-3">
-                    <input type="text" class="form-control" id="email">
-                </div>
-                <div class="my-3">
-                    <input type="password" class="form-control" id="password">
-                </div>
-                <div id="pw">
-                    
-                </div>
-                <button type="submit" class="btn btn-primary" id="send">전송</button>
-                <button type="button" class="btn btn-danger" id="close">닫기</button>
-            </form> 
+        <div class="tab-content show">
+            <p>스펙설명입니다. Information</p>
         </div>
-    </div>
-    <button type="button" class="btn btn-primary">버튼</button>
-    <div style="overflow: hidden;">
-        <div class="slide-container">
-            <div class="slide-box">
-                <img src="car1.png" />
-            </div>
-            <div class="slide-box">
-                <img src="car2.png"/>
-            </div>
-            <div class="slide-box">
-                <img src="car3.png"/>
-            </div>
+        <div class="tab-content">
+            <p>배송정보입니다. Shipping</p>
         </div>
-    </div>
-    <button class="next">다음</button>
-    <button class="before">이전</button>
-    <button class="slide-1">1</button>
-    <button class="slide-2">2</button>
-    <button class="slide-3">3</button>
-    <div class="alert alert-danger">
-        <span id="timer">5</span>초이내 클릭
-    </div>
-    <div class="lorem" style="width: 200px; height: 100px; overflow-y: scroll">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae voluptas voluptatum minus praesentium fugit debitis at, laborum ipsa itaque placeat sit, excepturi eius. Nostrum perspiciatis, eligendi quae consectetur praesentium exercitationem.
     </div> 
+
+
+
+
+
 
 
 
