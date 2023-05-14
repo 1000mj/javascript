@@ -1,41 +1,23 @@
-document.querySelectorAll('.tab-button')[0].addEventListener('click',function(){
-    document.querySelectorAll('.tab-button')[0].classList.remove('orange');
-    document.querySelectorAll('.tab-button')[1].classList.remove('orange');
-    document.querySelectorAll('.tab-button')[2].classList.remove('orange');
+const tabBtn = $('.tab-button');
+const tabContent = $('.tab-content');  
 
-    document.querySelectorAll('.tab-button')[0].classList.add('orange');
-
-    document.querySelectorAll('.tab-content')[0].classList.remove('show');
-    document.querySelectorAll('.tab-content')[1].classList.remove('show');
-    document.querySelectorAll('.tab-content')[2].classList.remove('show');
-
-    document.querySelectorAll('.tab-content')[0].classList.add('show');
+tabBtn.eq(0).on('click',function(){
+    tabBtn.removeClass('orange');
+    tabBtn.eq(0).addClass('orange');
+    tabContent.removeClass('show');
+    tabContent.eq(0).addClass('show');
 })
 
-document.querySelectorAll('.tab-button')[1].addEventListener('click',function(){
-    document.querySelectorAll('.tab-button')[0].classList.remove('orange');
-    document.querySelectorAll('.tab-button')[1].classList.remove('orange');
-    document.querySelectorAll('.tab-button')[2].classList.remove('orange');
-
-    document.querySelectorAll('.tab-button')[1].classList.add('orange');
-
-    document.querySelectorAll('.tab-content')[0].classList.remove('show');
-    document.querySelectorAll('.tab-content')[1].classList.remove('show');
-    document.querySelectorAll('.tab-content')[2].classList.remove('show');
-
-    document.querySelectorAll('.tab-content')[1].classList.add('show');
+tabBtn.eq(1).on('click',function(){
+    tabBtn.removeClass('orange');
+    tabBtn.eq(1).addClass('orange');
+    tabContent.removeClass('show');
+    tabContent.eq(1).addClass('show');
 })
 
-document.querySelectorAll('.tab-button')[2].addEventListener('click',function(){
-    document.querySelectorAll('.tab-button')[0].classList.remove('orange');
-    document.querySelectorAll('.tab-button')[1].classList.remove('orange');
-    document.querySelectorAll('.tab-button')[2].classList.remove('orange');
-
-    document.querySelectorAll('.tab-button')[2].classList.add('orange');
-
-    document.querySelectorAll('.tab-content')[0].classList.remove('show');
-    document.querySelectorAll('.tab-content')[1].classList.remove('show');
-    document.querySelectorAll('.tab-content')[2].classList.remove('show');
-
-    document.querySelectorAll('.tab-content')[2].classList.add('show');
+tabBtn.eq(2).on('click',function(){
+    tabBtn.removeClass('orange');
+    tabBtn.eq(2).addClass('orange');
+    tabContent.removeClass('show');
+    tabContent.eq(2).addClass('show');
 })
