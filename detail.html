@@ -51,7 +51,6 @@
             display: block;
         }
     </style>
-      
     <div class="container mt-5">
         <ul class="list">
             <li class="tab-button">Products</li>
@@ -70,141 +69,9 @@
     </div> 
 
 
+    <script src="./tab.js"></script>
 
 
-
-
-
-
-    <script>
-        document.querySelector('.lorem').addEventListener('scroll',function(){
-            if(document.querySelector('.lorem').scrollTop>=188){
-                alert('다읽었어요~');
-            }
-        });
-    </script>
-
-
-
-    <script>
-        window.addEventListener('scroll',function(){
-            if(window.scrollY>=100){
-                document.querySelector('.navbar-brand').style.fontSize='20px';
-            }else{
-                document.querySelector('.navbar-brand').style.fontSize='30px'
-            }
-        });
-    </script>
-
-
-
-
-
-    <script>
-        var container=document.querySelector(".slide-container");
-        var slideNow = 1;
-        document.querySelector('.next').addEventListener('click',function(){
-            if(slideNow >=document.querySelectorAll('.slide-box img').length){
-                return;
-            }
-            container.style.transform='translateX(-'+slideNow+'00vw)';
-            slideNow ++;
-        });
-        document.querySelector('.before').addEventListener('click',function(){
-                slideNow --;
-                container.style.transform='translateX(-'+slideNow+'00vw)';
-        });
-        
-        document.querySelector(".slide-1").addEventListener('click',function(){
-            container.style.transform='translateX(-0vw)';
-            slideNow=1;
-        });
-        document.querySelector(".slide-2").addEventListener('click',function(){
-            container.style.transform='translateX(-100vw)';
-            slideNow=2;
-        });
-        document.querySelector(".slide-3").addEventListener('click',function(){
-            container.style.transform='translateX(-200vw)';
-            slideNow=3;
-        });
-
-    </script>
-
-    <script>
-        document.getElementById('password').includes('@')
-    </script>
-
-    <script>
-        let num = 5;
-
-        setInterval(function(){
-            num -= 1;
-            if (num >= 0){
-                document.getElementById('timer').innerHTML = num;
-            }if(num==0){
-                $('.alert').hide();
-            }
-        }, 1000);
-
-    </script>
-
-    <script>
-        var count = 0;
-        document.getElementById('mode').addEventListener('click',function(){
-            count+=1;
-            if(count%3==1){
-                document.getElementById('mode').innerHTML='Light 🔄';
-            }else{
-                document.getElementById('mode').innerHTML='Dark 🔄';
-            }
-        })
-    </script>
-
-
-    <script>
-        document.getElementsByClassName('navbar-toggler').addEventListener('click', function(){
-            document.getElementsByClassName('list-group').classList.add('show');
-        });
-    </script>
-    <script>
-        $('form').on('submit',function(e){
-            var 입력한값=document.getElementById('email').value;
-            if(입력한값==''){
-                alert('아이디를 입력하세요.');
-                e.preventDefault(); //form 전송막기
-            if(/\S+@\S+\.\S+/.test(입력한값)){
-                alert('이메일형식 맞지않음');
-            }
-            }else if(document.getElementById('password').value==''){
-                alert('비밀번호를 입력하세요.');
-                e.preventDefault();
-            }
-        });
-    </script>
-    <script>
-        $('close').on('click',function(){
-            $('black-bg').css('display','none');
-        })
-    </script>
-    <script>
-        $('.navbar-toggler').on('click', function() {
-            $( '.list-group' ).toggle( 'slow' );
-            });
-    </script>
-
-
-
-    
-    <script>
-        $('.btn').on('click',function(){
-            $('.white-bg,.black-bg').css('display','block');
-        })
-    </script>
-    <script>
-        $('#close').on('click',function(){
-            $('.white-bg,.black-bg').css('display','none');
-        })
-    </script>    
 
     
 </body>
