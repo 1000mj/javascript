@@ -46,7 +46,6 @@
             </form> 
         </div>
     </div>
-    <button type="button" class="btn btn-primary">버튼</button>
     <div style="overflow: hidden;">
         <div class="slide-container">
             <div class="slide-box">
@@ -60,6 +59,7 @@
             </div>
         </div>
     </div>
+    <button type="button" class="btn btn-primary">버튼</button>
     <button class="next">다음</button>
     <button class="before">이전</button>
     <button class="slide-1">1</button>
@@ -72,7 +72,17 @@
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae voluptas voluptatum minus praesentium fugit debitis at, laborum ipsa itaque placeat sit, excepturi eius. Nostrum perspiciatis, eligendi quae consectetur praesentium exercitationem.
     </div> 
 
+    <script>
+        document.querySelector('.black-bg').addEventListener('click',function(e){
+            document.querySelector('.black-bg,.white-bg').style.display='none';
 
+            e.target; //유저가 실제로 누른것
+            e.currentTarget; //이벤트리스너 달린 곳
+            e.preventDefault(); // 이벤트 기본동작 막아줌
+            e.stopPropagation(); // 내 상위요소로 이벤트 버블링 막아줌
+            
+        })
+    </script>
 
     <script>
         document.querySelector('.lorem').addEventListener('scroll',function(){

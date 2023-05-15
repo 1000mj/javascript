@@ -6,6 +6,9 @@ body{
     height: 2000px;
 }
 
+.btn{
+    z-index: 2;
+}
 .navbar{
     position: fixed;
     height: 100px;
