@@ -11,7 +11,7 @@ const tabLength = $('.tab-button').length;
 //     })
 // }
 
-function 탭열기(num){
+function openTab(num){
     tabBtn.removeClass('orange');
     tabBtn.eq(num).addClass('orange');
     tabContent.removeClass('show');
@@ -21,6 +21,6 @@ function 탭열기(num){
 
 $('.list').click(function(e){
 
-    탭열기(e.target.dataset.id);
+    openTab(e.target.dataset.id);
 
 });
