@@ -44,14 +44,21 @@
         <p>상품선택</p>
         <select class="form-select mt-2">
             <option>모자</option>
-            <option value="셔츠">셔츠</option>
+            <option>셔츠</option>
+            <option>바지</option>
         </select>        
         <select class="form-select mt-2 form-hide">
             <option>100</option>
             <option>95</option>
             <option>90</option>
         </select>
+        <select class="form-select mt-2 form-hide">
+            <option>28</option>
+            <option>29</option>
+            <option>30</option>
+        </select>
     </form>
+
 
     <script>
         var formSelect = document.querySelectorAll('.form-select');
@@ -65,8 +72,15 @@
         formSelect[0].addEventListener('input',function(){
             if (formSelect[0].value=='모자'){
                 formSelect[1].classList.add('form-hide');
+                formSelect[2].classList.add('form-hide');
             }
         })
+        formSelect[0].addEventListener('input', function() {
+            if (formSelect[0].value == '바지') {
+                formSelect[1].classList.add('form-hide');
+                formSelect[2].classList.remove('form-hide');
+            }
+        });
     </script>
 
     <script>
