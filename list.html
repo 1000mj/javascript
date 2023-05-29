@@ -61,28 +61,32 @@
 
     <script>
         var pants = [28, 30, 32, 34, 36];
+        var shirt = [90, 95, 100, 105, 110];
+        var cap = ['black','white']
         $('.form-select').eq(0).on('input', function(){
-
-        var value = $('.form-select').eq(0).val();
-        if (value == '셔츠') {
-            $('.form-select').eq(1).removeClass('form-hide');
-        }
-        else if (value == '바지'){
-            $('.form-select').eq(1).removeClass('form-hide');
-            $('.form-select').eq(1).html('');
-            pants.forEach(function(data){
-            $('.form-select').eq(1).append(`<option>${data}</option>`)
-            })
-        }
-
-        });
-        formSelect[0].addEventListener('input',function(){
-            if (formSelect[0].value=='모자'){
-                formSelect[1].classList.add('form-hide');
-                formSelect[2].classList.add('form-hide');
+            var value = $('.form-select').eq(0).val();
+            if (value == '셔츠') {
+                $('.form-select').eq(1).removeClass('form-hide');
+                $('.form-select').eq(1).html('');
+                shirt.forEach(function(data){
+                    $('.form-select').eq(1).append(`<option>${data}</option>`)
+                })
             }
-        })
-        
+            else if (value == '바지'){
+                $('.form-select').eq(1).removeClass('form-hide');
+                $('.form-select').eq(1).html('');
+                pants.forEach(function(data){
+                    $('.form-select').eq(1).append(`<option>${data}</option>`)
+                })
+            }
+            else if (value == '모자'){
+                $('.form-select').eq(1).removeClass('form-hide');
+                $('.form-select').eq(1).html('');
+                cap.forEach(function(data){
+                    $('.form-select').eq(1).append(`<option>${data}</option>`)
+                })
+            }
+        });
     </script>
 
     <script>
