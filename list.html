@@ -60,40 +60,55 @@
 
 
     <script>
+        var 출석부 = ['흥민','영희','철수','재석','철수'];
+
+        function 이름찾기(data){
+
+            for(var i=0;i<5; i++){
+                if(data == 출석부[i]){
+                    return console.log('있어요');
+                }
+            }
+        }
+        이름찾기('철수');
+
+        for (var q=2; q<10; q++){
+            for(var i=1;i<10; i++){
+                console.log(q*i);
+            }
+        }
+    </script>
+
+    <script>
         var pants = [28, 30, 32, 34, 36];
         var shirt = [90, 95, 100, 105, 110];
         var cap = ['black','white','red']
         $('.form-select').eq(0).on('input', function(){
-            var value = $('.form-select').eq(0).val();
+            var value = this.value;
             if (value == '셔츠') {
                 $('.form-select').eq(1).removeClass('form-hide');
                 $('.form-select').eq(1).html('');
-                shirt.forEach(function(data){
+                shirt.forEach((data)=>{
                     $('.form-select').eq(1).append(`<option>${data}</option>`)
                 })
             }
             else if (value == '바지'){
                 $('.form-select').eq(1).removeClass('form-hide');
                 $('.form-select').eq(1).html('');
-                pants.forEach(function(data){
+                pants.forEach((data)=>{
                     $('.form-select').eq(1).append(`<option>${data}</option>`)
                 })
             }
             else if (value == '모자'){
                 $('.form-select').eq(1).removeClass('form-hide');
                 $('.form-select').eq(1).html('');
-                cap.forEach(function(data){
+                cap.forEach((data)=>{
                     $('.form-select').eq(1).append(`<option>${data}</option>`)
                 })
             }
         });
 
 
-        var obj = {name : 'kim', age : 20}
-
-        for(var key in obj){
-            console.log(obj[key])
-        }
     </script>
 
     <script>
