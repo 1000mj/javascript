@@ -60,24 +60,14 @@
 
 
     <script>
-        var 출석부 = ['흥민','영희','철수','재석','철수'];
-
-        function 이름찾기(data){
-
-            for(var i=0;i<5; i++){
-                if(data == 출석부[i]){
-                    return console.log('있어요');
-                }
-            }
-        }
-        이름찾기('철수');
-
-        for (var q=2; q<10; q++){
-            for(var i=1;i<10; i++){
-                console.log(q*i);
-            }
-        }
+        $.get('https://codingapple1.github.io/price.json').done((data)=>{
+            console.log(data)
+        })
+        .fail(()=>{
+            console.log('실패함')
+        })
     </script>
+
 
     <script>
         var pants = [28, 30, 32, 34, 36];
