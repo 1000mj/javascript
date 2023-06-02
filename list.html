@@ -24,8 +24,7 @@
         </div>
     </div> 
 
-
-
+    <button class='btn btn-danger center' id="more">더보기</button>
 
     <form class="container my-5 form-group">
         <p>상품선택</p>
@@ -45,14 +44,32 @@
 
     <div id="test"></div>
 
+
+
     <script>
-    
+        $('#more').on('click',()=>{
+            $.get('https://codingapple1.github.io/js/more1.json').done((data)=>{
+                data.forEach((data)=>{
+                    var 템플릿 =
+                    `<div class="col-sm-4">
+                        <img src="https://via.placeholder.com/600" class="w-100"/>
+                        <h5>${data.title}</h5>
+                        <p>가격 : ${data.price}</p>
+                        </div>`;
+                    $('.row').append(템플릿);
+                });
+            });
+        });
+    </script>
+
+    <script>
+        
         var products = [
             { id : 0, price : 70000, title : 'Blossom Dress' },
             { id : 1, price : 50000, title : 'Springfield Shirt' },
             { id : 2, price : 60000, title : 'Black Monastery' }
         ];
-
+        
         
         products.forEach((data)=>{
             var 템플릿 =
@@ -60,20 +77,12 @@
                 <img src="https://via.placeholder.com/600" class="w-100"/>
                 <h5>${data.title}</h5>
                 <p>가격 : ${data.price}</p>
-            </div>`;
-            $('.row').append(템플릿);
-        })
-    
+                </div>`;
+                $('.row').append(템플릿);
+            })           
     </script> 
 
-    <script>
-        $.get('https://codingapple1.github.io/price.json').done((data)=>{
-            console.log(data.price)
-        })
-        .fail(()=>{
-            console.log('실패함')
-        })
-    </script>
+
 
 
     <script>
