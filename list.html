@@ -25,6 +25,9 @@
     </div> 
 
     <button class='btn btn-danger center' id="more">더보기</button>
+    <div class="container my-3">
+        <button class="btn btn-danger" id="price">가격내림순</button>
+    </div>
 
     <form class="container my-5 form-group">
         <p>상품선택</p>
@@ -70,6 +73,24 @@
             { id : 2, price : 60000, title : 'Black Monastery' }
         ];
         
+
+
+
+
+
+
+
+
+
+        var array = [7, 1, 5, 8, 20, 11]
+        var array2 = ['가', '나', '다', '라']
+        array.sort((a,b)=>{
+            return a - b
+        });
+        console.log(array);
+
+
+
         
         products.forEach((data)=>{
             var 템플릿 =
