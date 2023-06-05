@@ -73,10 +73,22 @@
             { id : 2, price : 60000, title : 'Black Monastery' }
         ];
         
-
-
-
-
+        $('#price').click(function(){
+            products.sort(function(a,b){
+                return a.price - b.price;
+            });
+            $('.row').html('');
+            products.forEach((data)=>{
+                var 템플릿 =
+                    `<div class="col-sm-4">
+                        <img src="https://via.placeholder.com/600" class="w-100"/>
+                        <h5>${data.title}</h5>
+                        <p>가격 : ${data.price}</p>
+                        </div>`;
+                $('.row').append(템플릿);
+            })      
+        });
+        
 
 
 
@@ -87,7 +99,6 @@
         array.sort((a,b)=>{
             return a - b
         });
-        console.log(array);
 
 
 
