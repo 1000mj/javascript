@@ -93,12 +93,13 @@
             { id : 2, price : 60000, title : 'Black Monastery' }
         ];
         
+        var arr = [1, 2, 3];
+        var newArr = JSON.stringify(arr);
 
-
-        localStorage.setItem('num', 1);
-        localStorage.getItem('num');
-        localStorage.removeItem('num');
-
+        localStorage.setItem('num', newArr);
+        var 꺼낸거 = localStorage.getItem('num');
+        
+        console.log(JSON.parse(꺼낸거));
 
 
 
