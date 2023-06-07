@@ -20,6 +20,7 @@
                 <img src="https://via.placeholder.com/600" class="w-100">
                 <h5>Card title</h5>
                 <p>가격 : 70000</p>
+                <button class='buy'>구매</button>
             </div> -->
         </div>
     </div> 
@@ -44,7 +45,7 @@
         
     </form>
 
-
+    <button class='buy'>구매</button>
     <div id="test"></div>
 
     <script>
@@ -77,7 +78,7 @@
                         <img src="https://via.placeholder.com/600" class="w-100"/>
                         <h5>${data.title}</h5>
                         <p>가격 : ${data.price}</p>
-                        <button className='buy'>구매</button>
+                        <button class='buy'>구매</button>
                     </div>`;
                     $('.row').append(템플릿);
                 });
@@ -99,9 +100,11 @@
         localStorage.setItem('num', newArr);
         var 꺼낸거 = localStorage.getItem('num');
         
-        console.log(JSON.parse(꺼낸거));
+        // console.log(JSON.parse(꺼낸거));
 
-
+        
+        
+        
 
         $('#price').click(function(){
             products.sort(function(a,b){
@@ -114,7 +117,7 @@
                         <img src="https://via.placeholder.com/600" class="w-100"/>
                         <h5>${data.title}</h5>
                         <p>가격 : ${data.price}</p>
-                        <button className='buy'>구매</button>
+                        <button class='buy'>구매</button>
                     </div>`;
                 $('.row').append(템플릿);
             })      
@@ -132,10 +135,30 @@
                 <img src="https://via.placeholder.com/600" class="w-100"/>
                 <h5>${data.title}</h5>
                 <p>가격 : ${data.price}</p>
-                <button className='buy'>구매</button>
+                <button class='buy'>구매</button>
             </div>`;
                 $('.row').append(템플릿);
-            })           
+            })       
+            
+        
+
+        $('.buy').click((e)=>{
+            var title = $(e.target).siblings('h5').text();
+
+            if(localStorage.getItem('cart') != null){
+                var pull = JSON.parse(localStorage.getItem('cart'))
+                pull.push(title);
+                localStorage.setItem('cart', JSON.stringify(pull));
+            }
+            else{
+            localStorage.setItem('cart', JSON.stringify([title]))
+            }
+        })
+
+
+
+
+
     </script> 
 
 
