@@ -148,6 +148,7 @@
             if(localStorage.getItem('cart') != null){
                 var pull = JSON.parse(localStorage.getItem('cart'))
                 pull.push(title);
+                
                 localStorage.setItem('cart', JSON.stringify(pull));
             }
             else{
